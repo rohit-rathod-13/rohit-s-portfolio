@@ -4,18 +4,22 @@ import "../styles/theme.css";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(() => {
-    if (typeof window !== "undefined") {
-      return window.matchMedia("(prefers-color-scheme: dark)").matches;
-    }
-    return false;
-  });
+  const [isDarkMode, setIsDarkMode] = useState(true); // Default to Dark Mode
 
   useEffect(() => {
-    const darkModeMediaQuery = window.matchMedia(
-      "(prefers-color-scheme: dark)"
-    );
-    const handleColorSchemeChange = (e) => setIsDarkMode(e.matches);
+    // Apply dark mode class on initial load
+    document.documentElement.classList.add("dark-mode");
+
+    const darkModeMediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+    const handleColorSchemeChange = (e) => {
+      setIsDarkMode(e.matches);
+      if (e.matches) {
+        document.documentElement.classList.add("dark-mode");
+      } else {
+        document.documentElement.classList.remove("dark-mode");
+      }
+    };
+
     darkModeMediaQuery.addListener(handleColorSchemeChange);
 
     return () => {
