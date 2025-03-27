@@ -1,0 +1,210 @@
+.certificates {
+    min-height: 100vh;
+    padding: 2rem;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9) 0%, transparent 100%);
+    transition: background-color 0.5s ease;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.certificates h2 {
+    font-size: 3rem;
+    font-weight: 600;
+    color: #000;
+    letter-spacing: -0.5px;
+    margin-bottom: 2rem;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.category-filters {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.category-filter {
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.8);
+    color: #333;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    font-size: 0.9rem;
+}
+
+.category-filter:hover {
+    background: rgba(255, 255, 255, 0.9);
+    transform: translateY(-2px);
+}
+
+.category-filter.active {
+    background: linear-gradient(45deg, #d11313, #fcce03);
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.certificates-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem 0;
+}
+
+.certificate-card {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.certificate-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.certificate-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+.certificate-levels {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.level-badge {
+    background: linear-gradient(45deg, #d11313, #fcce03);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.category-badge {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.60rem;
+    font-weight: 400;
+    color: white;
+}
+
+.certificate-card.ai .category-badge {
+    background: linear-gradient(45deg, #00C9FF, #92FE9D);
+}
+
+.certificate-card.development .category-badge {
+    background: linear-gradient(45deg, #FF416C, #FF4B2B);
+}
+
+.certificate-card.cloud .category-badge {
+    background: linear-gradient(45deg, #834D9B, #D04ED6);
+}
+
+/* Dark mode styles */
+.dark-mode .certificates {
+    background: rgba(0, 0, 0, 0.95);
+}
+
+.dark-mode .certificates h2 {
+    color: #fff;
+}
+
+.dark-mode .certificate-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .certificate-card h3 {
+    color: #fff;
+}
+
+.dark-mode .category-filter {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .category-filter:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.dark-mode .category-filter.active {
+    background: linear-gradient(45deg, #d11313, #fcce03);
+    color: white;
+}
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .certificates {
+        padding: 1rem;
+        padding-top: 2.5rem;
+    }
+
+    .certificates h2 {
+        font-size: 2.5rem;
+    }
+
+    .certificates-content {
+        grid-template-columns: 1fr;
+    }
+
+    .category-filters {
+        gap: 0.5rem;
+    }
+
+    .category-filter {
+        padding: 0.4rem 1.2rem;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .certificates {
+        padding-top: 3.5rem;
+    }
+
+    .certificates h2 {
+        font-size: 2rem;
+    }
+
+    .certificate-card {
+        padding: 1rem;
+    }
+}

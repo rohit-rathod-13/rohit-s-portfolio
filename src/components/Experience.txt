@@ -1,0 +1,37 @@
+Experience
+
+SENIOR AI ENGINEER | CREOSPAN | FEBRUARY 2025 – CURRENT
+· Led data analysis initiatives to uncover critical Key Performance Indicators (KPIs), enabling data-driven
+decision-making and process optimization.
+· Designed and implemented a Vector Database to efficiently store and retrieve embedding data,
+enhancing the scalability of AI-powered search and recommendation systems.
+· Developed an intelligent ticket triaging system, leveraging Generative AI to surface the top most relevant
+past incidents and provide contextual reasoning on why each issue matches the new one, significantly
+improving resolution speed and accuracy.
+
+AI ENGINEER | STRADIT | NOVEMBER 2024 – JANUARY 2024
+· Designed and developed a Generative AI-based Guardrails Testing Tool for a USA-based Multi-Asset
+Management Firm, automating evaluation modules for toxicity, bias, politeness, sensitive content,
+hallucination detection, and model integrity.
+· Spearheaded the integration of Generative AI into guardrail testing workflows, enhancing robustness,
+scalability, and reusability of AI frameworks for enterprise-level applications.
+
+AI ENGINEER | WIPRO | MAY 2022 – OCTOBER 2024
+· Innovate and lead in the development of Generative AI models producing creative and realistic outputs.
+· Engineered user-centric conversational flows by integrating NLP capabilities.
+· Developed and deployed a Generative AI-based Marketing Email Content Generator for a USA-based
+Investment Firm, reducing manual intervention by 30-40% and driving business growth.
+· Created a Social Lens Application for Telefonica (German telecom firm), correlating customer feedback
+with product features using Generative AI, boosting issue resolution efficiency by 50-60%.
+· Built ML models using Logistic Regression, SVM, and TensorFlow, including a Resume Shortlister Model
+to streamline candidate screening processes.
+· Conducted exploratory data analysis (EDA) to uncover actionable insights and optimized data analysis
+methodologies for improved accuracy and efficiency.
+
+PYTHON TUTOR | EDUCADD | APRIL 2021 – APRIL 2022
+· Delivered interactive Python programming sessions for students of varying skill levels, developing
+engaging curricula to enhance comprehension.
+· Provided personalized guidance, evaluated progress, and offered constructive feedback to foster
+effective learning outcomes.
+· Cultivated an inclusive learning environment while staying updated on industry trends to ensure
+relevant and practical knowledge delivery.
