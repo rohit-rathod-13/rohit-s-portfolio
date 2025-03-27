@@ -31,9 +31,7 @@ const About = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.4, duration: 0.6 }}
           >
-            I'm <span className="highlight-name">Rohit Rathod</span>, a tech
-            enthusiast with a passion for solving complex problems in
-            AI Engineering. I enjoy creating innovative, user-focused solutions.
+            I'm <span className="highlight-name">Rohit Rathod</span>, a passionate AI Engineer & Data Scientist specializing in Generative AI, Chatbots, ML, NLP, and scalable AI solutions that drive innovation and business growth..
           </motion.p>
         </motion.div>
 
