@@ -1,5 +1,5 @@
-import React, { useState } from "react";
 import { motion } from "framer-motion";
+import React, { useState } from "react";
 import "./Skills.css";
 
 const Skills = () => {
@@ -8,21 +8,21 @@ const Skills = () => {
   // Updated category mapping for progress bars
   const getProgressBarClass = (category) => {
     const categoryMap = {
-      "Programming": "languages",
+      Programming: "languages",
       "AI & Machine Learning": "data-science",
       "Tools & Frameworks": "frameworks",
       "Cloud & Platforms": "design",
     };
-    return categoryMap[category] || "languages" || "data-science"|| "frameworks" || "design";
+    return categoryMap[category] || "languages";
   };
 
   const initialSkillsCount = window.innerWidth <= 768 ? 3 : 5;
 
   const skills = {
-    "Programming": [
+    Programming: [
       { name: "Python", proficiency: 90 },
       { name: "Java", proficiency: 85 },
-      { name: "SQL", proficiency: 80 }
+      { name: "SQL", proficiency: 80 },
     ],
     "AI & Machine Learning": [
       { name: "Generative AI", proficiency: 95 },
@@ -33,30 +33,30 @@ const Skills = () => {
       { name: "Prompt Engineering", proficiency: 95 },
       { name: "EDA", proficiency: 85 },
       { name: "Data Visualization", proficiency: 95 },
-      { name: "Vector DB", proficiency: 85 }
+      { name: "Vector DB", proficiency: 85 },
     ],
     "Cloud & Platforms": [
-      { name: "AWS (Bedrock,SageMaker, Lambda, API Gateway)", proficiency: 95 },
-      { name: " Azure", proficiency: 95 },
-      { name: "Google Cloud Platform", proficiency: 95 },
+      { name: "AWS (Bedrock,SageMaker, Lambda, API Gateway)", proficiency: 90 },
+      { name: " Azure", proficiency: 70 },
+      { name: "Google Cloud Platform", proficiency: 70 },
       { name: "ChatGPT", proficiency: 95 },
-      { name: "Kore.ai", proficiency: 95 },
-      { name: "Dataiku", proficiency: 95 },      
-      { name: "Knime", proficiency: 95 },
+      { name: "Kore.ai", proficiency: 90 },
+      { name: "Dataiku", proficiency: 80 },
+      { name: "Knime", proficiency: 80 },
       { name: "Jupyter Notebook", proficiency: 95 },
     ],
     "Tools & Frameworks": [
-      { name: "Google Generative AI Studio", proficiency: 90 },
-      { name: "Azure Cloud", proficiency: 95 },
+      { name: "Google Generative AI Studio", proficiency: 75 },
+      { name: "Azure Cloud", proficiency: 70 },
       { name: "Streamlit", proficiency: 95 },
-      { name: "OpenSearch", proficiency: 95 }
-    ]
+      { name: "OpenSearch", proficiency: 95 },
+    ],
   };
 
   const toggleCategory = (category) => {
     setExpandedCategories((prev) => ({
       ...prev,
-      [category]: !prev[category]
+      [category]: !prev[category],
     }));
   };
 
@@ -102,14 +102,14 @@ const Skills = () => {
                     viewport={{ once: true }}
                     transition={{
                       duration: 0.5,
-                      delay: index * 0.1
+                      delay: index * 0.1,
                     }}
                     style={{
                       display:
                         !expandedCategories[category] &&
                         index >= initialSkillsCount
                           ? "none"
-                          : "block"
+                          : "block",
                     }}
                   >
                     <div className="skill-name">
@@ -121,14 +121,13 @@ const Skills = () => {
                         className={`progress-bar ${getProgressBarClass(
                           category
                         )}`}
-                        initial={{ scaleX: 0 }}
-                        whileInView={{ scaleX: 1 }}
+                        initial={{ width: 0 }}
+                        whileInView={{ width: `${item.proficiency}%` }}
                         viewport={{ once: true }}
                         transition={{
                           duration: 1,
-                          delay: 0.2 + index * 0.1
+                          delay: 0.2 + index * 0.1,
                         }}
-                        style={{ width: `${item.proficiency}%` }}
                       />
                     </div>
                   </motion.li>

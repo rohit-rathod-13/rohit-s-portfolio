@@ -115,13 +115,10 @@
     height: 100%;
     border-radius: 4px;
     transform-origin: left;
-    transform: scaleX(0);
-    animation: growBar 1s ease forwards;
+    background-color: #ddd; /* Default background */
 }
 
-/* Remove or comment out the old progress bar classes (.progress-bar.programming, etc.) */
-
-/* Replace with these consolidated progress bar classes */
+/* Progress bar classes */
 .progress-bar.languages {
     background: linear-gradient(90deg, #FF6B6B, #FF8E53);
 }
@@ -138,27 +135,7 @@
     background: linear-gradient(90deg, #FC466B, #3F5EFB);
 }
 
-.progress-bar.security {
-    background: linear-gradient(90deg, #833ab4, #fd1d1d);
-}
-
-.progress-bar.development {
-    background: linear-gradient(90deg, #0072ff, #00c6ff);
-}
-
-/* Remove this section entirely */
-/* Also update dark mode classes to use the same naming */
-.dark-mode .progress-bar.languages,
-.dark-mode .progress-bar.data-science,
-.dark-mode .progress-bar.frameworks,
-.dark-mode .progress-bar.design,
-.dark-mode .progress-bar.security,
-.dark-mode .progress-bar.development {
-    /* Keep the same gradients as light mode */
-    background: inherit;
-}
-
-/* Replace all dark mode progress bar classes with these */
+/* Dark mode progress bar classes */
 .dark-mode .progress-bar.languages {
     background: linear-gradient(90deg, #FF6B6B, #FF8E53);
 }
@@ -173,14 +150,6 @@
 
 .dark-mode .progress-bar.design {
     background: linear-gradient(90deg, #FC466B, #3F5EFB);
-}
-
-.dark-mode .progress-bar.security {
-    background: linear-gradient(90deg, #833ab4, #fd1d1d);
-}
-
-.dark-mode .progress-bar.development {
-    background: linear-gradient(90deg, #0072ff, #00c6ff);
 }
 
 .view-more-btn {

@@ -67,11 +67,14 @@ const Projects = () => {
           >
             <div className="project-info">
               <h3>{project.title}</h3>
+              
+              <p className="project-description">{project.description}</p>
+              
               <div className="technologies">
                 <span className="tech-label">Technologies:</span>
                 <span className="tech-stack">{project.technologies}</span>
               </div>
-              <p className="project-description">{project.description}</p>
+
               <div className="project-links">
                 {/* <button className="view-demo">View Demo</button> */}
                 {/* <button className="view-code">View Code</button> */}
